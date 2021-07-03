@@ -23,12 +23,18 @@ public class RestTest {
 
     @LocalServerPort
     int port;
-
+    String host = System.getProperty("host", "http://localhost/");
     @BeforeEach
     public void setUp() {
+	if(!host.equals("http://localhost/")){
+		port=8080;
+    	}
         RestAssured.port = port;
+	RestAssured.baseURI = host;
     }
 
+	
+	
     @Autowired
     private ObjectMapper objectMapper;
 
