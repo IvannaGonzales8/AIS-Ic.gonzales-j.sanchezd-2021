@@ -1,7 +1,7 @@
 name: 3rd workflow
 on:
   push:
-    branches: [master]
+    branches: [nope]
 
 jobs:
   docker_build:
