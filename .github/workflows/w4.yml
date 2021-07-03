@@ -2,7 +2,7 @@ name: 4rd workflow
 
 on:
   push:
-    branches: [master]
+    branches: [nope]
   schedule:
     - cron: '0 0 * * *'
 
