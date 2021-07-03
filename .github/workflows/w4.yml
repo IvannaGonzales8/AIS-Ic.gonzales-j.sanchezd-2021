@@ -7,6 +7,8 @@ on:
 
 jobs:
   tests:
+    runs-on: ubuntu-latest
+    steps:
     - name: Run RestTest
       run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.rest.*Test' test
     - name: Run SeleniumTest
