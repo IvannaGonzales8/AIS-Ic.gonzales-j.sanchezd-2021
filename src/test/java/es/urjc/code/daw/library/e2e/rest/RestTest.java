@@ -1,4 +1,4 @@
-package es.urjc.code.daw.library.e2e.rest;
+/*package es.urjc.code.daw.library.e2e.rest;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
@@ -99,3 +99,4 @@ public class RestTest {
  
     }
 }
+*/
