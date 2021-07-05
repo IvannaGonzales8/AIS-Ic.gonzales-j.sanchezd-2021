@@ -23,14 +23,14 @@ public class RestTest {
 
     @LocalServerPort
     int port;
-    String host = System.getProperty("host", "http://localhost/");
+    String host = System.getProperty("https://ais-ivanna2.herokuapp.com/", "https://ais-ivanna2.herokuapp.com/");
     @BeforeEach
-    public void setUp() {
-	if(!host.equals("http://localhost/")){
-		port=8080;
-    	}
-        RestAssured.port = port;
-	RestAssured.baseURI = host;
+    public void setUp(){
+        if(host.equals("https://ais-ivanna2.herokuapp.com/")){
+            port=8080;
+        }
+        RestAssured.port=port;
+        RestAssured.baseURI=host;
     }
 
 	
