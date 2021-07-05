@@ -17,7 +17,7 @@ import es.urjc.code.daw.library.book.Book;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @DisplayName("REST tests")
 public class RestTest {
 
@@ -26,9 +26,9 @@ public class RestTest {
     String host = System.getProperty("https://ais-ivanna2.herokuapp.com/", "https://localhost/");
     @BeforeEach
     public void setUp(){
-        if(host.equals("https://ais-ivanna2.herokuapp.com/")){
+        /*if(host.equals("https://ais-ivanna2.herokuapp.com/")){
             port=8080;
-        }
+        }*/
         RestAssured.port=port;
         RestAssured.baseURI=host;
     }
