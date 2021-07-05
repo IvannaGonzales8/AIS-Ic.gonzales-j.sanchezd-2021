@@ -1,8 +1,6 @@
 name: 4rd workflow
 
 on:
-  push:
-    branches: [nope]
   schedule:
     - cron: '0 0 * * *'
 
