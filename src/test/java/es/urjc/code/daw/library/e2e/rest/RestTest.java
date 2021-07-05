@@ -23,7 +23,7 @@ public class RestTest {
 
     @LocalServerPort
     int port;
-    String host = System.getProperty("https://ais-ivanna2.herokuapp.com/", "https://ais-ivanna2.herokuapp.com/");
+    String host = System.getProperty("https://ais-ivanna2.herokuapp.com/", "https://localhost/");
     @BeforeEach
     public void setUp(){
         if(host.equals("https://ais-ivanna2.herokuapp.com/")){
