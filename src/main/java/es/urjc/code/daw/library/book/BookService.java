@@ -38,6 +38,14 @@ public class BookService {
 		notificationService.notify("Book Event: book with title="+newBook.getTitle()+" was created");
 		return newBook;
 	}
+	public Book save(Book book, int n){
+		Book newBook = book;
+		newBook.setDescription(LineBreaker.breakText(book.getDescription(), n));
+		newBook = repository.save(newBook);
+		notificationService.notify("Book Event: book with title="+newBook.getTitle()+" was created");
+		return newBook;
+
+	}
 
 	public void delete(long id) {
 		repository.deleteById(id);
